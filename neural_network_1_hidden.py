@@ -51,6 +51,7 @@ class NeuralNetwork:
         
         deltas = [np.random.rand(self.num_hidden_neurons), np.random.rand(self.num_outputs)]
         
+        # back propagate deltas
         for output in range(self.num_outputs):
             deltas[1][output] = sigmoid_derivative(sums[1][output]) * (given_outputs[output] - activations[1][output])
             
@@ -60,6 +61,7 @@ class NeuralNetwork:
                 sum += (self.weights[1][neuron, output] * deltas[1][output])
             deltas[0][neuron] = (sigmoid_derivative(sums[0][neuron]) * sum)
             
+        # use deltas to update weights
         for input in range(self.num_inputs + 1):
             for neuron in range(self.num_hidden_neurons):
                 self.weights[0][input, neuron] += (learning_rate * inputs[input] * deltas[0][neuron])

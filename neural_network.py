@@ -80,7 +80,7 @@ class NeuralNetwork:
         
     # Back propagates a single example to update weights
     # correct_outputs is a numpy array of size num_outputs
-    def back_propagate(self, inputs, correct_outputs):
+    def back_propagate(self, inputs, correct_outputs, learning_rate):
         # get the outputs we currently get for that input
         (sums, activations) = self.feed_forward(inputs)
         network_outputs = activations[self.num_hidden_layers]
@@ -133,22 +133,22 @@ class NeuralNetwork:
         for layer in range(1, self.num_hidden_layers):
             for prev_neuron in range(self.neurons_per_layer):
                 for next_neuron in range(self.neurons_per_layer):
-                    self.weights[layer][prev_neuron, next_neuron] += activations[layer-1][prev_neuron] * deltas[layer][next_neuron] # and this
+                    self.weights[layer][prev_neuron, next_neuron] += learning_rate * activations[layer-1][prev_neuron] * deltas[layer][next_neuron] # and this
                     
         # Update output weights
         for output in range(self.num_outputs):
             for prev_neuron in range(self.neurons_per_layer):
-                self.weights[self.num_hidden_layers][prev_neuron, output] += activations[self.num_hidden_layers-1][prev_neuron] * deltas[self.num_hidden_layers][output] # and this
+                self.weights[self.num_hidden_layers][prev_neuron, output] += learning_rate * activations[self.num_hidden_layers-1][prev_neuron] * deltas[self.num_hidden_layers][output] # and this
         
         # doesn't return anything (weights update in place)
             
             
         
     # Train a network by repeatedly backpropagating all the examples
-    def train_network(self, num_examples, inputs_list, outputs_list, num_iterations):
+    def train_network(self, num_examples, inputs_list, outputs_list, num_iterations, learning_rate):
         for i in range(num_iterations):
             for j in range(num_examples):
-                self.back_propagate(inputs_list[j], outputs_list[j])
+                self.back_propagate(inputs_list[j], outputs_list[j], learning_rate)
     
     # Convenience function for feeding forward then returning only the output
     def get_output(self, inputs):
@@ -168,4 +168,9 @@ d = np.array([0.,0.])
 examples = [a, b, c, d]
 labels = [np.array([0.]), np.array([1.]), np.array([1.]), np.array([0.])]
 
-xor_net.train_network(4, examples, labels, 10000)
+xor_net.train_network(4, examples, labels, 10000, 0.3)
+
+print xor_net.get_output(a)
+print xor_net.get_output(b)
+print xor_net.get_output(c)
+print xor_net.get_output(d)
