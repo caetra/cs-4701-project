@@ -52,7 +52,7 @@ class NeuralNetwork:
         
         # do inputs -> first hidden layer
         for next_neuron in range(self.neurons_per_layer):
-            sum = 0
+            sum = 0.0
             for input in range(self.num_inputs + 1):
                 sum += self.weights[0][input, next_neuron] * inputs[input]
             sums[0][next_neuron] = sum
@@ -61,7 +61,7 @@ class NeuralNetwork:
         # do hidden layers
         for layer in range(1, self.num_hidden_layers): # length of weights is num_hidden_layers + 1
             for next_neuron in range(self.neurons_per_layer): # this should work?
-                sum = 0
+                sum = 0.0
                 for prev_neuron in range(self.neurons_per_layer):
                     sum += self.weights[layer][prev_neuron, next_neuron] * activations[layer - 1][prev_neuron]
                 sums[layer][next_neuron] = sum
@@ -69,7 +69,7 @@ class NeuralNetwork:
                 
         # do last hidden layer -> outputs
         for output in range(self.num_outputs):
-            sum = 0
+            sum = 0.0
             for prev_neuron in range(self.neurons_per_layer):
                 sum += self.weights[self.num_hidden_layers][prev_neuron, output] * activations[self.num_hidden_layers - 1][prev_neuron]
             sums[self.num_hidden_layers][output] = sum
@@ -100,7 +100,7 @@ class NeuralNetwork:
         # Propagate the deltas backward through hidden layers
         for layer in list(reversed(range(1, self.num_hidden_layers))): # do layers in reverse order
             for neuron in range(self.neurons_per_layer):
-                sum = 0
+                sum = 0.0
                 num_in_next = 0
                 if layer == self.num_hidden_layers - 1:
                     num_in_next = self.num_outputs
@@ -112,7 +112,7 @@ class NeuralNetwork:
                 
         # Propagate deltas for input layer
         for input in range(self.num_inputs + 1):
-            sum = 0
+            sum = 0.0
             num_in_next = 0
             if self.num_hidden_layers == 1:
                 num_in_next = self.num_outputs
@@ -124,19 +124,21 @@ class NeuralNetwork:
                 
         # Update the weights in the network
         # Update input weights
+        inputs = np.append(inputs, 1.) # add the bias term
         for input in range(self.num_inputs + 1):
             for neuron in range(self.neurons_per_layer):
-                self.weights[0][input, neuron] += activations[0][neuron] * deltas[0][neuron] # I think there's something wrong with this line
+                #self.weights[0][input, neuron] += activations[0][neuron] * deltas[0][neuron] # I think there's something wrong with this line
+                self.weights[0][input, neuron] += inputs[input] * deltas[0][neuron]
         # Update hidden layer weights
         for layer in range(1, self.num_hidden_layers):
             for prev_neuron in range(self.neurons_per_layer):
                 for next_neuron in range(self.neurons_per_layer):
-                    self.weights[layer][prev_neuron, next_neuron] += activations[layer][next_neuron] * deltas[layer][next_neuron] # and this
+                    self.weights[layer][prev_neuron, next_neuron] += activations[layer-1][prev_neuron] * deltas[layer][next_neuron] # and this
                     
         # Update output weights
         for output in range(self.num_outputs):
             for prev_neuron in range(self.neurons_per_layer):
-                self.weights[self.num_hidden_layers][prev_neuron, output] += activations[self.num_hidden_layers][output] * deltas[self.num_hidden_layers][output] # and this
+                self.weights[self.num_hidden_layers][prev_neuron, output] += activations[self.num_hidden_layers-1][prev_neuron] * deltas[self.num_hidden_layers][output] # and this
         
         # doesn't return anything (weights update in place)
             
