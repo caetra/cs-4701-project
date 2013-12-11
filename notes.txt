@@ -1,0 +1,316 @@
+notes
+
+PERCEPTRON
+
+number of iterations = 1
+learning rate = 0.5
+Loaded data
+Training perceptron
+C:\Users\Chris\Documents\GitHub\cs-4701-project\perceptron.py:9: RuntimeWarning:
+ overflow encountered in exp
+  return 1/(1 + np.exp(-x))
+Trained perceptron
+0.599333333333 training accuracy for perceptron
+1798 of 3000
+0.615865084322 test accuracy for perceptron
+986 of 1601
+>>>
+
+number of iterations = 1
+learning rate = 0.5
+Loaded data
+Training perceptron
+C:\Users\Chris\Documents\GitHub\cs-4701-project\perceptron.py:9: RuntimeWarning:
+ overflow encountered in exp
+  return 1/(1 + np.exp(-x))
+Trained perceptron
+0.599333333333 training accuracy for perceptron
+1798 of 3000
+0.61711430356 test accuracy for perceptron
+988 of 1601
+>>>
+
+number of iterations = 1
+learning rate = 0.5
+Loaded data
+Training perceptron
+C:\Users\Chris\Documents\GitHub\cs-4701-project\perceptron.py:9: RuntimeWarning:
+ overflow encountered in exp
+  return 1/(1 + np.exp(-x))
+Trained perceptron
+0.598666666667 training accuracy for perceptron
+1796 of 3000
+0.617738913179 test accuracy for perceptron
+989 of 1601
+>>>
+
+number of iterations = 1
+learning rate = 1
+Loaded data
+Training perceptron
+Trained perceptron
+0.401 training accuracy for perceptron
+1203 of 3000
+0.381011867583 test accuracy for perceptron
+610 of 1601
+>>>
+
+number of iterations = 10
+learning rate = 0.5
+Loaded data
+Training perceptron
+C:\Users\Chris\Documents\GitHub\cs-4701-project\perceptron.py:9: RuntimeWarning:
+ overflow encountered in exp
+  return 1/(1 + np.exp(-x))
+Trained perceptron
+0.601 training accuracy for perceptron
+1803 of 3000
+0.618363522798 test accuracy for perceptron
+990 of 1601
+>>>
+
+number of iterations = 10
+learning rate = 0.5
+Loaded data
+Training perceptron
+C:\Users\Chris\Documents\GitHub\cs-4701-project\perceptron.py:9: RuntimeWarning:
+ overflow encountered in exp
+  return 1/(1 + np.exp(-x))
+Trained perceptron
+0.599 training accuracy for perceptron
+1797 of 3000
+0.618988132417 test accuracy for perceptron
+991 of 1601
+>>>
+
+number of iterations = 100
+learning rate = 1
+Loaded data
+Training perceptron
+C:\Users\Chris\Documents\GitHub\cs-4701-project\perceptron.py:9: RuntimeWarning:
+ overflow encountered in exp
+  return 1/(1 + np.exp(-x))
+Trained perceptron
+0.599666666667 training accuracy for perceptron
+1799 of 3000
+0.618363522798 test accuracy for perceptron
+990 of 1601
+>>>
+
+----1 hidden layer----
+
+number of iterations = 1
+learning rate = 1
+Loaded data
+Training perceptron
+Trained perceptron
+0.401 training accuracy for perceptron
+1203 of 3000
+0.381011867583 test accuracy for perceptron
+610 of 1601
+>>>
+
+----2 hidden layers----
+
+same
+
+WITH THE DATA REDUCED TO ONLY WORD FREQUENCIES
+
+number of iterations = 1
+learning rate = 1
+Loaded data
+Training perceptron
+Trained perceptron
+0.917 training accuracy for perceptron
+2751 of 3000
+0.917551530294 test accuracy for perceptron
+1469 of 1601
+>>>
+
+number of iterations = 10
+learning rate = 1
+Loaded data
+Training perceptron
+Trained perceptron
+0.933 training accuracy for perceptron
+2799 of 3000
+0.925046845721 test accuracy for perceptron
+1481 of 1601
+>>>
+
+number of iterations = 100
+learning rate = 1
+Loaded data
+Training perceptron
+Trained perceptron
+0.939 training accuracy for perceptron
+2817 of 3000
+0.92567145534 test accuracy for perceptron
+1482 of 1601
+>>>
+
+----1 hidden layer----
+
+number of iterations = 1
+learning rate = 1
+hidden neurons = 10
+Loaded data
+Training neural net, 1 layer
+Trained net
+0.904 training accuracy for perceptron
+2712 of 3000
+0.890068707058 test accuracy for perceptron
+1425 of 1601
+>>>
+
+number of iterations = 5
+learning rate = 0.3
+hidden neurons = 10
+Loaded data
+Training neural net, 1 layer
+Trained net
+0.925333333333 training accuracy for perceptron
+2776 of 3000
+0.910680824485 test accuracy for perceptron
+1458 of 1601
+>>>
+
+number of iterations = 10
+learning rate = 0.3
+hidden neurons = 10
+Loaded data
+Training neural net, 1 layer
+Trained net
+0.931 training accuracy for perceptron
+2793 of 3000
+0.911930043723 test accuracy for perceptron
+1460 of 1601
+>>>
+
+number of iterations = 1
+learning rate = 1
+hidden neurons = 20
+Loaded data
+Training neural net, 1 layer
+Trained net
+0.907 training accuracy for perceptron
+2721 of 3000
+0.901936289819 test accuracy for perceptron
+1444 of 1601
+>>>
+
+number of iterations = 5
+learning rate = 0.3
+hidden neurons = 20
+Loaded data
+Training neural net, 1 layer
+Trained net
+0.928333333333 training accuracy for perceptron
+2785 of 3000
+0.923173016864 test accuracy for perceptron
+1478 of 1601
+>>>
+
+number of iterations = 10
+learning rate = 0.3
+hidden neurons = 20
+Loaded data
+Training neural net, 1 layer
+Trained net
+0.926 training accuracy for perceptron
+2778 of 3000
+0.905683947533 test accuracy for perceptron
+1450 of 1601
+>>>
+
+number of iterations = 1
+learning rate = 1
+hidden neurons = 40
+Loaded data
+Training neural net, 1 layer
+Trained net
+0.401 training accuracy for perceptron
+1203 of 3000
+0.381011867583 test accuracy for perceptron
+610 of 1601
+>>>
+
+--2 hidden layers--
+
+number of iterations = 1
+learning rate = 1
+hidden neurons 1st layer = 10
+hidden neurons 2nd layer = 5
+Loaded data
+Training neural net, 2 layer
+Trained net
+0.599 training accuracy for perceptron
+1797 of 3000
+0.618988132417 test accuracy for perceptron
+991 of 1601
+>>>
+
+number of iterations = 1
+learning rate = 1
+hidden neurons 1st layer = 20
+hidden neurons 2nd layer = 10
+Loaded data
+Training neural net, 2 layer
+Trained net
+0.401 training accuracy for perceptron
+1203 of 3000
+0.381011867583 test accuracy for perceptron
+610 of 1601
+>>>
+
+number of iterations = 5
+learning rate = 0.3
+hidden neurons 1st layer = 5
+hidden neurons 2nd layer = 5
+Loaded data
+Training neural net, 2 layer
+Trained net
+0.918666666667 training accuracy for perceptron
+2756 of 3000
+0.910680824485 test accuracy for perceptron
+1458 of 1601
+>>>
+
+number of iterations = 5
+learning rate = 0.3
+hidden neurons 1st layer = 10
+hidden neurons 2nd layer = 5
+Loaded data
+Training neural net, 2 layer
+Trained net
+0.927 training accuracy for perceptron
+2781 of 3000
+0.919425359151 test accuracy for perceptron
+1472 of 1601
+>>>
+
+number of iterations = 5
+learning rate = 0.3
+hidden neurons 1st layer = 20
+hidden neurons 2nd layer = 10
+Loaded data
+Training neural net, 2 layer
+Trained net
+0.599 training accuracy for perceptron
+1797 of 3000
+0.618988132417 test accuracy for perceptron
+991 of 1601
+>>>
+
+number of iterations = 10
+learning rate = 0.3
+hidden neurons 1st layer = 20
+hidden neurons 2nd layer = 10
+Loaded data
+Training neural net, 2 layer
+Trained net
+0.928666666667 training accuracy for perceptron
+2786 of 3000
+0.916302311056 test accuracy for perceptron
+1467 of 1601
+>>>

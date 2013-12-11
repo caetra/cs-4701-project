@@ -11,7 +11,7 @@ def sigmoid(x):
 def sigmoid_derivative(x):
     return sigmoid(x) * (1 - sigmoid(x))
     
-class NeuralNetwork:
+class NeuralNetwork_2HL:
     
     def __init__(self, num_inputs, num_hidden_first, num_hidden_second, num_outputs):
         self.num_inputs = num_inputs
@@ -98,17 +98,17 @@ class NeuralNetwork:
         return self.feed_forward(inputs)[1][2]
  
 # main program ########################################################################## 
-xor_net = NeuralNetwork(2, 3, 3, 1)
-a = np.array([1.,1.])
-b = np.array([1.,0.])
-c = np.array([0.,1.])
-d = np.array([0.,0.])
-examples = [a, b, c, d]
-labels = [np.array([0.]), np.array([1.]), np.array([1.]), np.array([0.])]
+# xor_net = NeuralNetwork_2HL(2, 3, 3, 1)
+# a = np.array([1.,1.])
+# b = np.array([1.,0.])
+# c = np.array([0.,1.])
+# d = np.array([0.,0.])
+# examples = [a, b, c, d]
+# labels = [np.array([0.]), np.array([1.]), np.array([1.]), np.array([0.])]
 
-xor_net.train_network(4, examples, labels, 5000, 0.3)
+# xor_net.train_network(4, examples, labels, 5000, 0.3)
 
-print xor_net.get_output(a)
-print xor_net.get_output(b)
-print xor_net.get_output(c)
-print xor_net.get_output(d)
+# print xor_net.get_output(a)
+# print xor_net.get_output(b)
+# print xor_net.get_output(c)
+# print xor_net.get_output(d)

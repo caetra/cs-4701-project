@@ -57,34 +57,34 @@ class Perceptron:
         
 #### Main program ####
 
-print "doing and"
-and_net = Perceptron(2, 1)
-a = np.array([1.,1.])
-b = np.array([1.,0.])
-c = np.array([0.,1.])
-d = np.array([0.,0.])
-examples = [a, b, c, d]
-labels = [np.array([1.]), np.array([0.]), np.array([0.]), np.array([0.])]
+# print "doing and"
+# and_net = Perceptron(2, 1)
+# a = np.array([1.,1.])
+# b = np.array([1.,0.])
+# c = np.array([0.,1.])
+# d = np.array([0.,0.])
+# examples = [a, b, c, d]
+# labels = [np.array([1.]), np.array([0.]), np.array([0.]), np.array([0.])]
 
-and_net.train_network(4, examples, labels, 5000, 0.3)
+# and_net.train_network(4, examples, labels, 5000, 0.3)
 
-print and_net.get_output(a)
-print and_net.get_output(b)
-print and_net.get_output(c)
-print and_net.get_output(d)
+# print and_net.get_output(a)
+# print and_net.get_output(b)
+# print and_net.get_output(c)
+# print and_net.get_output(d)
 
-print "doing or"
-or_net = Perceptron(2, 1)
-a = np.array([1.,1.])
-b = np.array([1.,0.])
-c = np.array([0.,1.])
-d = np.array([0.,0.])
-examples = [a, b, c, d]
-labels = [np.array([1.]), np.array([1.]), np.array([1.]), np.array([0.])]
+# print "doing or"
+# or_net = Perceptron(2, 1)
+# a = np.array([1.,1.])
+# b = np.array([1.,0.])
+# c = np.array([0.,1.])
+# d = np.array([0.,0.])
+# examples = [a, b, c, d]
+# labels = [np.array([1.]), np.array([1.]), np.array([1.]), np.array([0.])]
 
-or_net.train_network(4, examples, labels, 5000, 0.3)
+# or_net.train_network(4, examples, labels, 5000, 0.3)
 
-print or_net.get_output(a)
-print or_net.get_output(b)
-print or_net.get_output(c)
-print or_net.get_output(d)
+# print or_net.get_output(a)
+# print or_net.get_output(b)
+# print or_net.get_output(c)
+# print or_net.get_output(d)
