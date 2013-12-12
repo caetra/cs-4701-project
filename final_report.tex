@@ -153,7 +153,7 @@ Artificial neural networks are a class of machine learning algorithms in which t
 
 $a_j = g(in_j) = g(\sum_{i=0}^n w_{i,j}a_i)$
 
-g is typically either a hard threshold function which returns 1 if $in_j$ is above a certain value and 0 if it is below, or a logistic/sigmoid function, sigmoid(x) = $1/(1+e^{-x})$ which scales slowly from 0 to 1 over a range, but has the advantage of being differentiable which wewill need later.
+g is typically either a hard threshold function which returns 1 if $in_j$ is above a certain value and 0 if it is below, or a logistic/sigmoid function, sigmoid(x) = $1/(1+e^{-x})$ which scales slowly from 0 to 1 over a range, but has the advantage of being differentiable which we will need later.
 
 We concerned ourselves with feed-forward neural networks, as described in the text; networks in which a neuron will never have its output go to a previous neuron. In feed-forward networks, there is an input layer, some number of hidden layers, and an output layer, connected such that in every layer, all neurons receive the activations of all neurons in the previous layer, and if applicable output their activations to all neurons in the next layer.
 
@@ -295,7 +295,7 @@ Again, though both 5-10-5 and 10-20-10 performed reasonably well, they were beat
 
 This work demonstrated that a feedforward neural network can be an effective means of detecting spam emails with over 90$\%$ accuracy, but also that there are no appreciable benefits for using a multi-layer network instead of using a simple perceptron.
 
-While this is very accurate, perhaps more so than we expected, it still does not make neural network spam filtering something that one would want to use in practice necessarily. For example, most users would much rather have the occasional spam email end up in their inbox than to have an overzealous spam filter that detects all spam but also gets false positives on important emails. 90$\%$ accuracy where the other 10$\%$ are spam that get through the filter would be a mild nuisance, whereas 90$\%$ accuracy where most of the other 10$\%$ are emails we wanted to read that ended up in the spam folder would be actively undesirable. So one future extension would be to measure the number of false positives given by the neural network, and if possible try to minimize them.
+While this is very accurate, perhaps more so than we expected, it still does not make neural network spam filtering something that one would want to use in practice. For example, most users would much rather have the occasional spam email end up in their inbox than to have an overzealous spam filter that detects all spam but also gets false positives on important emails. 90$\%$ accuracy where the other 10$\%$ are spam that get through the filter would be a mild nuisance, whereas 90$\%$ accuracy where most of the other 10$\%$ are emails we wanted to read that ended up in the spam folder would be actively undesirable. So one future extension would be to measure the number of false positives given by the neural network, and if possible try to minimize them.
 
 Also, our 90-92$\%$ accuracy is still vastly outperformed by Bayesian spam filtering, which as we mentioned at the start of the paper is the standard algorithm used in practice for spam filtering. With a Bayesian classifier or other probabilistic/statistical models, it is possible to achieve accuracy greater than 99$\%$ and barely any false positives.
 
