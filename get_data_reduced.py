@@ -2,7 +2,6 @@
 
 import pickle
 import csv
-import svmlight_loader
 
 filename = 'spambase.test'
 

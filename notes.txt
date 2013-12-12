@@ -127,6 +127,17 @@ Trained perceptron
 1469 of 1601
 >>>
 
+number of iterations = 1
+learning rate = 1
+Loaded data
+Training perceptron
+Trained perceptron
+0.925666666667 training accuracy for perceptron
+2777 of 3000
+0.920674578389 test accuracy for perceptron
+1474 of 1601
+>>>
+
 number of iterations = 10
 learning rate = 1
 Loaded data
@@ -136,6 +147,39 @@ Trained perceptron
 2799 of 3000
 0.925046845721 test accuracy for perceptron
 1481 of 1601
+>>>
+
+number of iterations = 10
+learning rate = 1
+Loaded data
+Training perceptron
+Trained perceptron
+0.932333333333 training accuracy for perceptron
+2797 of 3000
+0.920674578389 test accuracy for perceptron
+1474 of 1601
+>>>
+
+number of iterations = 50
+learning rate = 1
+Loaded data
+Training perceptron
+Trained perceptron
+0.928333333333 training accuracy for perceptron
+2785 of 3000
+0.908806995628 test accuracy for perceptron
+1455 of 1601
+>>>
+
+number of iterations = 50
+learning rate = 1
+Loaded data
+Training perceptron
+Trained perceptron
+0.932 training accuracy for perceptron
+2796 of 3000
+0.912554653342 test accuracy for perceptron
+1461 of 1601
 >>>
 
 number of iterations = 100

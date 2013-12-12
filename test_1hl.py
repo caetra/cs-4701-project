@@ -3,9 +3,9 @@
 #from neural_network_2_hidden import NeuralNetwork_2HL
 
 # CHANGE THESE PARAMETERS, OBSERVE RESULTS
-num_iterations = 10
+num_iterations = 5
 learning_rate = 0.3
-num_neurons = 20
+num_neurons = 40
 
 print('number of iterations = '+str(num_iterations))
 print('learning rate = '+str(learning_rate))
